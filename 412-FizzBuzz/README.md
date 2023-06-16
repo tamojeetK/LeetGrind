@@ -1,4 +1,5 @@
-# 412. Fizz Buzz
+<h2><a href="https://leetcode.com/problems/fizz-buzz/">412. Fizz Buzz</a></h2><h3>Easy</h3><hr>
+
 
 Given an integer `n`, return *a string array* `answer` *(**1-indexed**) where*:
 
