@@ -1,7 +1,7 @@
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        int m = matrix.length;
-        int n = matrix[0].length;
+        int m = matrix.length; // Sets the value of m to the number of row
+        int n = matrix[0].length; // Sets the value of n to the number of col
         int row = 0;
         int col = n - 1;
 
