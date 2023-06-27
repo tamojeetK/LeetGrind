@@ -10,7 +10,7 @@ class Solution {
             int firstIndx = s.indexOf(ch);
             int lastIndx = s.lastIndexOf(ch);
             if(firstIndx==lastIndx){
-                index = firstIndx;
+                index = start;
                 break;
             }
             start++;
