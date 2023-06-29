@@ -1,7 +1,6 @@
 class Solution {
     public int firstUniqChar(String s) {
-        int index = -1;
-        
+        int index = -1;        
         int start = 0;
         int end = s.length();
         
@@ -15,8 +14,6 @@ class Solution {
             }
             start++;
         }
-        
         return index;
-        
     }
 }
