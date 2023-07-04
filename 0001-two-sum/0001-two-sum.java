@@ -1,5 +1,6 @@
 import java.util.*;
 class Solution {
+    //Efficient method \U0001f447\U0001f3fb\U0001f447\U0001f3fb\U0001f447\U0001f3fb`
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> newMap = new HashMap<>();
         
@@ -16,7 +17,7 @@ class Solution {
         return nums;
     }
 }
-
+// Brute Force \U0001f447\U0001f3fb\U0001f447\U0001f3fb\U0001f447\U0001f3fb
 // class Solution {
 //     public static int[] twoSum(int[] nums, int target) {
 //         int[] arr = nums.clone();
