@@ -2,7 +2,6 @@ class Solution {
     public void moveZeroes(int[] nums) {
         int idx = 0;
         for (int i = 0; i < nums.length; i++) {
-
             // check if the num at i is != 0
 
             if (nums[i] != 0) {
