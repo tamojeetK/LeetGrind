@@ -1,23 +1,26 @@
 class Solution {
     public int[] smallerNumbersThanCurrent(int[] nums) {
-        int[] buckets = new int[102];
-
-        for (int num : nums) {
-         buckets[num]++;
+        int[] newArr = new int[nums.length];
+        
+        for (int index = 0; index < nums.length; index++) {
+            int count = countNum(nums, nums[index]);
+            newArr[index] = count;
         }
 
-        for (int i = 1; i < buckets.length; i++) {
-          buckets[i] += buckets[i - 1];
-        }
+        return newArr;
+    }
+    public static int countNum(int[] nums, int target){
+        int count = 0;
 
-        int[] result = new int[nums.length];
-        for (int i = 0; i < result.length; i++) {
-          if (nums[i] == 0)
-         result[i] = 0;
-          else
-         result[i] = buckets[nums[i] - 1];
-        }
+        for (int i = 0; i < nums.length; i++) {
 
-        return result;
+            if(nums[i] == target){
+                continue;
+            }
+            if(nums[i]<target){
+                count++;
+            }
+        }
+        return count;
     }
 }
