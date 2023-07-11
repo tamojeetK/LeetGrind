@@ -1,6 +1,6 @@
 class Solution {
     public void reverseString(char[] s) {
-        
+        //Naive approach
         int start = 0;
         int end = s.length-1;
         while(start < end){
