@@ -1,5 +1,6 @@
 class Solution {
     public boolean isValid(String s) {
+   //Using Stack ds approach
         
         Stack<Character> stk = new Stack<>();
 
