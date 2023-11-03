@@ -13,6 +13,11 @@ class Solution {
             }
         }
         return letters[startIndx % letters.length];
-        
+         /*
+        Since we know that ,
+        `start` is gonna be going out of the array,
+        We are gonna neutralise it by getting the remainder of the Division of 
+        `start` and `length of the array`
+        */
     }
 }
