@@ -1,23 +1,26 @@
 class Solution {
     public boolean validMountainArray(int[] arr) {
-        
-        int n = arr.length;
+        int N = arr.length;
         int i = 0;
-        
-        while( i+1 < n && arr[i] < arr[i+1]){
-            i++;
-        } 
-        
-        if(i==0 || i==n-1){
+
+        //walking up...
+        while( i + 1 < N && arr[i] < arr[i+1] ) {
+            i++; //go up
+        }
+        //after reaching the peak,
+        //check 
+        if(i == 0 || i == N-1){
             return false;
         }
-        
-        while(i+1<n && arr[i] > arr[i+1]){
+        //walking down...
+        while( i + 1 < N && arr[i] > arr[i+1] ) {
             i++;
-        }
-        
-        
-        return(i==n-1);
-        
+        }  
+
+        return i == N-1; //return whether i has reached the end of the Array or not.
+
+        //if i == end of the arr, it will retun True
+        //else False
+
     }
 }
