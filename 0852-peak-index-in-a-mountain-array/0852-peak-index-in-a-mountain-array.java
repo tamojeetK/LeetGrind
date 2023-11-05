@@ -1,19 +1,22 @@
 class Solution {
     public int peakIndexInMountainArray(int[] arr) {
-        int startIndx = 0;
-        int endIndx = arr.length-1;
+        int startIndex = 0;
+        int endIndex = arr.length-1;
 
-        while(startIndx<endIndx){
-            int midIndx = startIndx + (endIndx - startIndx)/2;
+        while(startIndex < endIndex){
+            int mid = startIndex + (endIndex - startIndex) / 2;
 
-            if(arr[midIndx+1]>arr[midIndx]){
-                startIndx = midIndx + 1;
+            // We check if the [mid] element is greater than [mid + 1] -> end = mid
+            if(arr[mid] > arr[mid+1]){
+                endIndex = mid;
             }
-            if(arr[midIndx]>arr[midIndx+1]){
-                endIndx = midIndx;
+            // We check if the [mid] element is smaller than [mid + 1] -> start = mid + 1
+            else {
+                startIndex = mid+1;
             }
         }
-
-        return startIndx;
+        // Eventually both the pointers would point on the same element, which turns
+        // out to be the Peak element
+        return startIndex;
     }
 }
